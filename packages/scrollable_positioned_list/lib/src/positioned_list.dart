@@ -338,7 +338,9 @@ class _PositionedListState extends State<PositionedList> {
                 itemLeadingEdge: itemOffset.round() /
                     scrollController.position.viewportDimension,
                 itemTrailingEdge: (itemOffset + box.size.height).round() /
-                    scrollController.position.viewportDimension));
+                    scrollController.position.viewportDimension,
+                itemHeight: box.size.height,
+                itemOffset: itemOffset));
           } else {
             final itemOffset =
                 box.localToGlobal(Offset.zero, ancestor: viewport).dx;
