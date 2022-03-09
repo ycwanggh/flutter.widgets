@@ -167,7 +167,7 @@ class VisibilityDetectorLayer extends ContainerLayer {
       if (isFirstUpdate) {
         // We're about to render a frame, so a post-frame callback is guaranteed
         // to fire and will give us the better immediacy than `scheduleTask<T>`.
-        SchedulerBinding.instance.addPostFrameCallback((timeStamp) {
+        SchedulerBinding.instance?.addPostFrameCallback((timeStamp) {
           _processCallbacks();
         });
       }
